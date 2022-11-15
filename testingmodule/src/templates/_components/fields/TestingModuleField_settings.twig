@@ -1,0 +1,26 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * testing module for Craft CMS
+ *
+ * TestingModuleField Field Settings
+ *
+ * @author    John Fuller
+ * @copyright Copyright (c) 2022 John Fuller
+ * @link      https://hungerandransom.com
+ * @package   TestingModule
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("modules\\testingmodule\\assetbundles\\testingmodule\\TestingModuleAsset") %}
+
+{{ forms.textField({
+    label: 'Some Attribute',
+    instructions: 'Enter some attribute here.',
+    id: 'someAttribute',
+    name: 'someAttribute',
+    value: field['someAttribute']})
+}}

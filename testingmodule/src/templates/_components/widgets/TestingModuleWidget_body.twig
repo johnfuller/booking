@@ -1,0 +1,20 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * testing module for Craft CMS
+ *
+ * TestingModuleWidget Widget Body
+ *
+ * @author    John Fuller
+ * @copyright Copyright (c) 2022 John Fuller
+ * @link      https://hungerandransom.com
+ * @package   TestingModule
+ * @since     1.0.0
+ */
+#}
+
+{% set iconUrl = view.getAssetManager().getPublishedUrl('@modules/testing-module/assetbundles/testingmodulewidgetwidget/dist', true) ~ '/img/TestingModuleWidget-icon.svg' %}
+
+<img src="{{ iconUrl }}" height="64" width="64" />
+
+<p>{{ message }}</p>

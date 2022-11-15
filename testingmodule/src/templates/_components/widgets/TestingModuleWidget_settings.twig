@@ -1,0 +1,26 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * testing module for Craft CMS
+ *
+ * TestingModuleWidget Widget Settings
+ *
+ * @author    John Fuller
+ * @copyright Copyright (c) 2022 John Fuller
+ * @link      https://hungerandransom.com
+ * @package   TestingModule
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("modules\\testingmodule\\assetbundles\\testingmodule\\TestingModuleAsset") %}
+
+{{ forms.textField({
+    label: 'Message',
+    instructions: 'Enter a message here.',
+    id: 'message',
+    name: 'message',
+    value: widget['message']})
+}}
